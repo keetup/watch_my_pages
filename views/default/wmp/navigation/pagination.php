@@ -11,7 +11,7 @@ $time = time();
         </a>
         <span class="wmpAjaxLoader hidden">
             <img src="<?php echo $vars['url'] ?>mod/watch_my_pages/graphics/ajax-loader.gif" alt="loading ..."/>
-            Loading ...
+            <?php echo elgg_echo('wmp:link:loading'); ?>
         </span>
     </div>
 
