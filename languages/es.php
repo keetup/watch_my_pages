@@ -5,7 +5,7 @@
  */
 $spanish = array(
     'wmp:link:load_more' => 'Cargar Más',
-    'wmp:link:loading' => 'Cargando ...',
+    'wmp:link:loading' => 'Cargando',
     
 );
 
