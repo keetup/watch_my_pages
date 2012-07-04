@@ -10,6 +10,9 @@ jQuery(document).ready(function($) {
         if (next_item.length == 0) {
             return false;
         }
+        
+        wrapper_element.find('.wmpAjaxLoader.hidden').removeClass('hidden');
+        element.hide();
       
         var next_link = $('a', next_item);
         var next_url = next_link.attr('href');

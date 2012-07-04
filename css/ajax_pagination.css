@@ -1,3 +1,17 @@
 .wmpPaginatorWrapper .wmpHiddenPaginator {
     display: none;
 }
+
+.wmpPaginatorWrapper {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 3px 10px 0;
+    
+    width:30%;
+    height: 21px;
+    
+    text-align: center;
+    
+    background-color:#EEE;
+    border: 1px solid #CCC;
+}
