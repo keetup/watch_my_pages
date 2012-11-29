@@ -22,12 +22,16 @@ jQuery(document).ready(function($) {
             success: function(html_data){
               
                 var listing = $(html_data).find('.elgg-list:first');
+                var gallery = $(html_data).find('.elgg-gallery:first');
                 var new_pager = $(html_data).find('.wmpPaginatorWrapper');
                
                 if (listing.length > 0) {
                     $(wrapper_element).prev('.elgg-layout .elgg-list').append(listing.children());
                 }
-               
+                
+                if (gallery.length > 0) {
+                    $(wrapper_element).prev('.elgg-layout .elgg-gallery').append(gallery.children());
+                }
                
                 if (new_pager.length > 0) {
                    
