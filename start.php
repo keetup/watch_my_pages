@@ -24,7 +24,9 @@ function wmp_init() {
 }
 
 function wmp_view_paginator_hook($hook, $type, $return, $params) {
-    if (!empty($return)) {
+    if (!empty($return) && !elgg_in_context('admin')) {
         return elgg_view('wmp/navigation/pagination', array_merge($params, array('hidden_paginator' => $return)));
     }
+
+    return $return;
 }
