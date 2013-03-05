@@ -2,9 +2,9 @@
 <plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
     <name>Watch My Pages</name>
     <author>Bortoli German for Keetup Development</author>
-    <version>1.0</version>
+    <version>2.0</version>
     <category>bundled</category>
-    <description>Ajax paginator replacement</description>
+    <description>Ajax paginator replacement, with infinite scroll support</description>
     <website>http://www.keetup.com/</website>
     <copyright>See COPYRIGHT.txt</copyright>
     <license>GNU General Public License version 2</license>
