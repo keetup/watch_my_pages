@@ -87,7 +87,7 @@ if (FALSE) { ?><script type='text/javascript'><?php }
                 
                 //Have to check and click
                 //We don't want to load scroll when we select order by rating.
-                var next_pagination = $('#next_pagination');
+                var next_pagination = $('.next_pagination-link');
                 var ajax_loader = $('.wmpAjaxLoader:visible');
 
                 if (typeof(next_pagination) !== 'undefined' && typeof(ajax_loader) !== 'undefined') {
