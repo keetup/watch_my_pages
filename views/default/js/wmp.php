@@ -7,9 +7,14 @@ if (FALSE) { ?><script type='text/javascript'><?php }
 
     elgg.provide('wmp');
     elgg.provide('wmp.paginator');
+    elgg.provide('wmp.infinite');
+    
+    wmp.infinite.enabled = <?php echo json_encode( can_infinitive_scroll() ); ?>
 
     wmp.paginator.init = function() {
-        wmp.paginator.enableInfiniteScroll();
+        if (wmp.infinite.enabled) {
+            wmp.infinite.enableScroll();
+        }
 
         $('a[data-pagination]').live('click touchend launch_apaginator', wmp.paginator.paginate);
 
@@ -71,7 +76,7 @@ if (FALSE) { ?><script type='text/javascript'><?php }
         });
     };
 
-    wmp.paginator.enableInfiniteScroll = function() {
+     wmp.infinite.enableScroll = function() {
         //Infinite scroll on pagination
         $(window).scroll(function() {
 
