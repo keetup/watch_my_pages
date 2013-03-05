@@ -6,7 +6,7 @@ $time = time();
 
 <div class="wmpPaginatorWrapper">
     <div class="wmpLoadMoreBtn">
-        <a href="javascript:void(0)" data-pagination="<?php echo $time ?>">
+        <a href="javascript:void(0)" data-pagination="<?php echo $time ?>" id='next_pagination'>
             <?php echo elgg_echo('wmp:link:load_more') ?>
         </a>
         <span class="wmpAjaxLoader hidden">

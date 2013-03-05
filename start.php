@@ -7,6 +7,12 @@
  *
  * @package WMP
  */
+
+/**
+ * Constant to define the default value of infinitive scroll enabled/disabled
+ */
+define('WMP_CAN_INFINITIVE', TRUE);
+
 elgg_register_event_handler('init', 'system', 'wmp_init');
 
 /**
@@ -26,7 +32,12 @@ function wmp_init() {
     
 }
 
+function can_infinitive_scroll() {
+    return WMP_CAN_INFINITIVE;
+}
+
 function wmp_view_paginator_hook($hook, $type, $return, $params) {
+ 
     if (!empty($return) && !elgg_in_context('admin')) {
         return elgg_view('wmp/navigation/pagination', array_merge($params, array('hidden_paginator' => $return)));
     }

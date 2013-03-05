@@ -9,8 +9,11 @@ if (FALSE) { ?><script type='text/javascript'><?php }
     elgg.provide('wmp.paginator');
 
     wmp.paginator.init = function() {
-        // Code using $ as usual goes here.
+        wmp.paginator.enableInfiniteScroll();
+
         $('a[data-pagination]').live('click touchend launch_apaginator', wmp.paginator.paginate);
+
+        
     };
 
     wmp.paginator.paginate = function(event) {
@@ -65,6 +68,32 @@ if (FALSE) { ?><script type='text/javascript'><?php }
                 }
 
             }
+        });
+    };
+
+    wmp.paginator.enableInfiniteScroll = function() {
+        //Infinite scroll on pagination
+        $(window).scroll(function() {
+
+            var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+            var scrolltrigger = 0.95;
+
+            if ((wintop / (docheight - winheight)) > scrolltrigger) {
+                
+                //Have to check and click
+                //We don't want to load scroll when we select order by rating.
+                var next_pagination = $('#next_pagination');
+                var ajax_loader = $('.wmpAjaxLoader:visible');
+
+                if (typeof(next_pagination) !== 'undefined' && typeof(ajax_loader) !== 'undefined') {
+                    if (next_pagination.length > 0 && ajax_loader.length === 0) {
+                        
+                        next_pagination.trigger('launch_apaginator');
+                    }
+                }
+            } //Finish to check the scroll
+
+
         });
     };
 
