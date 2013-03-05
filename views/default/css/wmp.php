@@ -1,3 +1,10 @@
+<?php
+/**
+ * CSS LIBRARY TO HANDLE AJAX PAGINATION
+ */
+if (FALSE) { ?><style><?php }
+
+?>
 .wmpPaginatorWrapper .wmpHiddenPaginator {
     display: none;
 }

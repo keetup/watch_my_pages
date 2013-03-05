@@ -15,11 +15,14 @@ elgg_register_event_handler('init', 'system', 'wmp_init');
 function wmp_init() {
     elgg_register_plugin_hook_handler('view', 'navigation/pagination', 'wmp_view_paginator_hook');
     
-    elgg_register_js('wmp.js','mod/watch_my_pages/js/ajax_pagination.js');
-    elgg_register_css('wmp.css','mod/watch_my_pages/css/ajax_pagination.css');
+    elgg_register_css('wmp', elgg_get_simplecache_url('css', 'wmp'));
+    elgg_register_simplecache_view('css/wmp');
     
-    elgg_load_css('wmp.css');
-    elgg_load_js('wmp.js');
+    elgg_register_js('wmp', elgg_get_simplecache_url('js', 'wmp'));
+    elgg_register_simplecache_view('js/wmp');
+    
+    elgg_load_js('wmp');
+    elgg_load_css('wmp');
     
 }
 
