@@ -1,7 +1,7 @@
 watch_my_pages
 ==============
 
-Elgg 1.8 ajax paginator
+Elgg 1.8 ajax paginator.
 
 
 ## This module replace the custom paginator, to a simple ajaxified one
